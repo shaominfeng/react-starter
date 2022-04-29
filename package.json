@@ -3,27 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^17.0.25",
+    "@types/react": "^17.0.25",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.3.3",
     "antd": "^4.20.1",
+    "axios": "^0.26.1",
+    "craco-less": "^1.17.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-scripts": "4.0.3",
     "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
     "typescript": "^4.6.3",
-    "axios": "^0.26.1",
-    "web-vitals": "^2.1.4",
-    "craco-less": "^1.17.1",
-    "@craco/craco": "^6.3.0",
-    "@types/axios": "^0.14.0",
-    "@types/node": "^17.0.25",
-    "@types/react": "^17.0.25",
-    "@types/react-dom": "^17.0.9",
-    "@types/react-router-dom": "^5.3.3"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "craco  start",
@@ -51,17 +51,16 @@
     ]
   },
   "lint-staged": {
-    "{src,mock,public}/**/*.{js,ts,tsx,md,json}": [
+    "{src,mock,public}/**/*.{js,ts,tsx,md}": [
       "prettier --write",
       "eslint",
       "git add"
-    ],
-    "./public/locales/": [
-      "eslint --fix --ext .json"
     ]
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4"
+    "@commitlint/config-conventional": "^16.2.4",
+    "mocker-api": "^2.9.5",
+    "mockjs": "^1.1.0"
   }
 }
