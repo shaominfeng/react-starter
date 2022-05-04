@@ -35,7 +35,9 @@
     "test": "craco  test",
     "eject": "react-scripts eject",
     "prepare": "node ./prepare.js",
-    "lint": "eslint \"{src,mock,public}/**/*.{ts,tsx,js}\" --fix"
+    "lint": "eslint \"{src,mock,public}/**/*.{ts,tsx,js}\" --fix",
+    "format": "prettier --write {src,mock,public}/**/*.{js,ts,tsx,md}",
+    "checkCodeStyle": "prettier --check {src,mock,public}/**/*.{js,ts,tsx,md}"
   },
   "eslintConfig": {
     "extends": [
