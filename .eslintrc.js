@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     "eslintConfig": {
         "extends": ["react-app", "shared-config"],
         "rules": {
