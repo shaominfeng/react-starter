@@ -1,8 +1,5 @@
 module.exports = {
-    "extends": ["react-app", "shared-config"],
-    "rules": {
-        "additional-rule": "warn"
-    },
+    "extends": ["react-app"],
     "overrides": [
         {
             "files": ["**/*.ts?(x)"],
