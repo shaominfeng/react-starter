@@ -27,16 +27,16 @@ module.exports = function ({ env }) {
 
     devServer: {
       open: false,
-      before(app) {
-        // import on demand because when building prod env, there's no mocker-api
-        when(
-          env === 'development' && process.env.REACT_APP_ENV === 'mock',
-          () => {
-            const apiMocker = require('mocker-api');
-            apiMocker(app, path.resolve('./mock/index.js'));
-          }
-        );
-      },
+      // before(app) {
+      //   // import on demand because when building prod env, there's no mocker-api
+      //   when(
+      //     env === 'development' && process.env.REACT_APP_ENV === 'mock',
+      //     () => {
+      //       const apiMocker = require('mocker-api');
+      //       apiMocker(app, path.resolve('./mock/index.js'));
+      //     }
+      //   );
+      // },
     },
   };
 };

@@ -23,12 +23,12 @@ const errorHandle = async (status: number, other: string) => {
       console.log(other);
   }
 };
+console.log(customConfig);
+// const apiPreFix = customConfig.bff.apiPreFix;
+// const baseUrl = customConfig.ui.request.baseUrl;
+// request.defaults.baseURL = baseUrl + apiPreFix;
 
-const apiPreFix = customConfig.bff.apiPreFix;
-const baseUrl = customConfig.ui.request.baseUrl;
-request.defaults.baseURL = baseUrl + apiPreFix;
-
-request.defaults.timeout = customConfig.ui.request.timeout;
+// request.defaults.timeout = customConfig.ui.request.timeout;
 request.defaults.headers.post["Content-Type"] = "application/json";
 
 //disable get cache for IE
