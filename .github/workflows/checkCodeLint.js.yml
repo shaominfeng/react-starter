@@ -26,5 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install -g eslint
+    - run: npm install @typescript-eslint/eslint-plugin@latest eslint --save-dev
     - run: npm run lint
