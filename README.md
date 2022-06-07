@@ -13,6 +13,7 @@ This is a scaffolding project,it can quickly help you start your project.
 ## Required
 1. Node > 16.14.2
 2. Git
+3. React > 18
 
 ## Quick Start
 

@@ -30,15 +30,4 @@ module.exports = {
       data: data,
     })
   ),
-
-  ...produceRequest(
-    "localAccounts/allen_shao@trendmicro.com.cn/multiTenants",
-    "GET",
-    (res, data) =>
-      res.json({
-        status: 200,
-        message: "success",
-        data: data,
-      })
-  ),
 };
