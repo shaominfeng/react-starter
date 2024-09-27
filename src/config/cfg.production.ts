@@ -1,6 +1,6 @@
 const config = {
   ui: {
-    title: "hello",
+    title: 'hello',
   },
 };
 export default config;

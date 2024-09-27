@@ -1,0 +1,11 @@
+.github
+.vscode
+.idea
+build
+coverage
+package.json
+*.json
+*.md
+
+!mock/**/*.json
+!public/locales/**/*.json

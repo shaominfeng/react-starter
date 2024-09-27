@@ -29,6 +29,12 @@ $ npm start         # visit http://localhost:3000/
 3. cd to react-ant-design-start folder. Run `npm install` in this path.
 4. `npm run start`
 
+```angular2html
+cd docker
+docker build -t my-app .
+docker run -it -p 3000:3000 my-app
+```
+
 ## Feature
 - :bulb: **Mock**: Mock api for frontend local test
 - :scroll: **Request**: API centralized management, easy to update and call
