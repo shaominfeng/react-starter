@@ -1,0 +1,8 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  react-app:
+    build: .
+    ports:
+      - "3000:80"

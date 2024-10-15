@@ -10,7 +10,6 @@ export function Index() {
       <BrowserRouter>
         <App />
       </BrowserRouter>
-      ,
     </React.StrictMode>
   );
 }

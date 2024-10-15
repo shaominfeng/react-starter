@@ -22,16 +22,13 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "^6.26.2",
-    "react-scripts": "5.0.1",
     "typescript": "^5.6.2",
     "uuid": "^10.0.0",
     "web-vitals": "^4.2.3"
   },
   "scripts": {
-    "start": "craco  start",
-    "build": "craco  build",
-    "test": "craco  test",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite  build",
     "prepare": "husky install",
     "lint": "eslint src --fix --config .eslintrc.js",
     "format": "prettier --write src/**/*.{ts,tsx,js}",
@@ -66,17 +63,19 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "cross-env": "^7.0.3",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
+    "@vitejs/plugin-react": "^4.3.2",
+    "cross-env": "^7.0.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.6",
     "mocker-api": "^2.10.0",
     "mockjs": "^1.1.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "vite": "^5.4.9"
   }
 }

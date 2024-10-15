@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-// App.js
+// App.jsx
 function Home() {
   return (
     <>

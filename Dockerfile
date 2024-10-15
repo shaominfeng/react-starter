@@ -1,14 +1,16 @@
 # build environment
-FROM node:20-alpine as build
+FROM casdevreg.azurecr.io/aks-base-image/node20-base-image:1.0 AS build-env
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install -D npm prettier \
-    && npm ci --loglevel silly --production --ignore-scripts --no-audit \
-    && rm -f .npmrc \
+# 安装生产依赖
+RUN npm ci --loglevel silly --production --ignore-scripts --no-audit --legacy-peer-deps
 
-COPY . ./
+# 安装开发依赖
+RUN npm install prettier
+
+COPY docker ./
 
 # check style before build
 RUN echo 'step 1 check style before build'
@@ -18,8 +20,8 @@ RUN echo 'step 2 run build'
 RUN npm run build && echo "step3"
 
 # production environment
-FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/nginx/html
+FROM casdevreg.azurecr.io/aks-base-image/nginx-base-image:3
+COPY --from=build-env /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
