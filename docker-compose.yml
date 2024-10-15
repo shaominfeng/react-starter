@@ -3,6 +3,8 @@ version: '3'
 
 services:
   react-app:
+    image: nginx
+    container_name: react-starter-app
     build: .
     ports:
       - "3000:80"
